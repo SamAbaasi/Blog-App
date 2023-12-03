@@ -1,5 +1,5 @@
 "use client"
-import { createContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useState, useLayoutEffect, ReactNode } from 'react';
 
 type Theme = 'dark' | 'light';
 
@@ -12,11 +12,17 @@ export const ThemeContext = createContext<ThemeContextProps | undefined>(undefin
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('light');
+  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    setIsMounted(true);
     const storedTheme = localStorage.getItem('theme') || 'light';
     setTheme(storedTheme as Theme);
   }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   const changeTheme = (newTheme: Theme) => {
     setTheme(newTheme);
