@@ -3,7 +3,7 @@ import { createContext, useState, useEffect, ReactNode } from 'react';
 
 type Theme = 'dark' | 'light';
 
-interface ThemeContextProps {
+export interface ThemeContextProps {
   theme: Theme;
   changeTheme: (theme: Theme) => void;
 }

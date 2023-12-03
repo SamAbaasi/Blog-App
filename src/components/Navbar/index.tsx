@@ -2,13 +2,14 @@
 import Link from 'next/link';
 import React, { useContext } from 'react';
 import styles from '@/components/Navbar/Navbar.module.scss';
-import { ThemeContext } from '@/context/ThemeContext';
+import { ThemeContext, ThemeContextProps } from '@/context/ThemeContext';
 import { HiSun, HiMoon } from 'react-icons/hi';
 import Image from 'next/image';
 import { useGithubUserData } from '@/Hooks/gitHub';
 
 function Navbar() {
-  const { theme, changeTheme } = useContext(ThemeContext);
+  const defaultValue: ThemeContextProps = { theme: 'light', changeTheme: () => {} };
+  const { theme = defaultValue.theme, changeTheme = defaultValue.changeTheme } = useContext(ThemeContext) || {};
   const { data: githubUserData } = useGithubUserData('samanabasi');
 
   return (

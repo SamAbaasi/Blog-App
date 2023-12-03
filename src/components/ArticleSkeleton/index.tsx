@@ -3,7 +3,9 @@ import { useContext } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 const ArticleSkeleton = () => {
-    const { theme } = useContext(ThemeContext);
+    const themeContext = useContext(ThemeContext);
+    const theme = themeContext ? themeContext.theme : 'light';
+
     const baseColor = theme === 'dark' ? "purple" : undefined;
     const highlightColor = theme === 'dark' ? "pink" : undefined;
     return (
