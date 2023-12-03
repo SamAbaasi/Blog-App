@@ -40,6 +40,10 @@
 
   --pink: lab(63 59.32 -1.47);
   --purple: lab(33 42.09 -43.19);
+  --dark-bg: #121212;
+  --light-bg: #ffffff;
+  --dark-text: #000000;
+  --light-text: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
   :root {

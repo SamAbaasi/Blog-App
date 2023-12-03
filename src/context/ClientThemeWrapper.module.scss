@@ -1,19 +1,9 @@
 .darkTheme {
-    --background-color: #121212;
-    --text-color: #ffffff;
-  }
-  
-  .lightTheme {
-    --background-color: #ffffff;
-    --text-color: #000000;
-  }
-  
-  .darkTheme {
-    background-color: var(--background-color) !important;
-    color: var(--text-color) !important;
-  }
-  
-  .lightTheme {
-    background-color: var(--background-color) !important;
-    color: var(--text-color) !important;
-  }
+  background-color: var(--dark-bg) !important;
+  color: var(--light-text) !important;
+}
+
+.lightTheme {
+  background-color: var(--light-bg) !important;
+  color: var(--dark-text) !important;
+}
