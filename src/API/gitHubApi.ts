@@ -1,5 +1,5 @@
 import GithubUserData from '@/Types/GitHub';
-import axios from 'axios';
+import axios from "@/lib/axios";
 
 export const fetchGithubUserData = async (username: string) => {
   try {
