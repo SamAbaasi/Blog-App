@@ -1,0 +1,22 @@
+.article {
+    padding: 16px 0px;
+    text-decoration: none !important;
+    color: inherit;
+    transition: scale 0.2s ease-in-out;
+    .title {
+        font-weight: 900;
+        font-size: 28px;
+        color: var(--purple) !important;
+    }
+    &:active, &:visited {
+        .title {
+            color: var(--pink) !important;
+        }
+    }
+    &:hover {
+        scale: 1.01;
+    }
+    .date {
+        margin: 8px 0px;
+    }
+}

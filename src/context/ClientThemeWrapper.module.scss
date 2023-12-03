@@ -1,0 +1,19 @@
+.darkTheme {
+    --background-color: #121212;
+    --text-color: #ffffff;
+  }
+  
+  .lightTheme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  .darkTheme {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  .lightTheme {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }

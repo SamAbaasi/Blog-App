@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, var(--pink), var(--purple)) !important;
+}
+.themeWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+}
+.sun {
+    color: yellow !important;
+    font-size: 30px;
+}
+.moon {
+    color: blue !important;
+    font-size: 30px;
+}
+.githubAvatar {
+    border-radius: 50%;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    span {
+        margin-right: 4px;
+    }
+    img {
+        border: 2px solid var(--pink);
+    }
+}
